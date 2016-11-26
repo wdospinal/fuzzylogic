@@ -1,0 +1,57 @@
+<md-sidenav
+  class="md-sidenav-left"
+  md-component-id="left"
+  md-is-locked-open="false"
+  md-whiteframe="4"
+  layout="column"
+  style="position: fixed;"
+>
+  <md-toolbar>
+    <div layout="row" layout-align="center center">
+      <h1 class="md-toolbar-tools">Opciones</h1>
+      <md-button ng-click="vm.toggleSidenav()" class="md-icon-button" >
+        <md-icon aria-label="Clear" class="material-icons">keyboard_backspace</md-icon>
+      </md-button>
+    </div>  
+  </md-toolbar>
+  <md-content>
+    <md-list ng-cloak flex>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('upload')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>Subir CSV</p>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('academic-products')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>C. Prod. Académicos</p>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('minor-thesis-projects')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>C. Trabajos de Grado</p>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('technology-products')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>C. Prod. Tecnológicos</p>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('academic-events')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>C. Eventos Académicos</p>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('courses-degrees')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>Cursos y Diplomados</p>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item class="md-1-line" ng-click="vm.goTo('awards')">
+        <md-icon aria-label="Clear" class="material-icons">label</md-icon>
+        <p>Premios y Reconocimientos</p>
+      </md-list-item>
+
+    </md-list>
+  </md-content>
+
+</md-sidenav>

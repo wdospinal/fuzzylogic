@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Teachers Data Scrapping</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="components/angular-material/angular-material.min.css">
+  <link href="components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-app="app" layout="column">
+  <header>
+    <div ui-view="header"></div>
+  </header>
+  
+  <div layout="row">
+    <div ui-view="sidebar"></div>
+   
+    <div ui-view="container"></div>    
+  </div>
+
+  <!-- <footer>
+    <div ui-view="footer"></div>
+  </footer> -->
+  
+  <!-- Vendor -->
+  <script src="components/angular/angular.min.js"></script>
+  <script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="components/angular-animate/angular-animate.min.js"></script>
+  <script src="components/angular-aria/angular-aria.min.js"></script>
+  <script src="components/angular-messages/angular-messages.min.js"></script>
+  <script src="components/angular-material/angular-material.min.js"></script>
+  <script src="components/angular-material-data-table/dist/md-data-table.min.js"></script>
+  <!-- Application -->
+  <script src="app/index.js"></script>
+  <script src="app/config/index.js"></script>
+  <script src="app/directives/customer-on-change.directive.js"></script>
+  <script src="app/services/fileReader.js"></script>
+  <script src="app/filters/index.js"></script>
+  <!-- Pages -->
+  <script src="app/pages/cvlac/cvlac.service.js"></script>
+  <script src="app/pages/cvlac/upload-csv.controller.js"></script>
+  <script src="app/pages/academic-events/academic-events.controller.js"></script>
+  <script src="app/pages/academic-products/academic-products.controller.js"></script>
+  <script src="app/pages/awards/awards.controller.js"></script>
+  <script src="app/pages/courses-degrees/courses-degrees.controller.js"></script>
+  <script src="app/pages/minor-thesis-projects/minor-thesis-projects.controller.js"></script>
+  <script src="app/pages/technology-products/technology-products.controller.js"></script>
+  <!-- Layouts -->
+  <script src="app/layouts/footer/footer.controller.js"></script>
+  <script src="app/layouts/header/header.controller.js"></script>
+  <script src="app/layouts/sidebar/sidebar.controller.js"</script>
+</body>
+
+</html>

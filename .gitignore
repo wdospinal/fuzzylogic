@@ -1,0 +1,12 @@
+# Environment
+.vscode
+.editorconfig
+
+# Build and module files
+build/
+node_modules/
+**/components/
+
+# Files to show results
+output.json
+**/components/

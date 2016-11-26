@@ -1,0 +1,51 @@
+<md-content flex layout-padding>
+  <div ng-if="vm.fetchedTechers.length === 0">
+    <input type="file" name="myFile" value="" custom-on-change="vm.fileChanged">
+    <button ng-click="vm.readFile()">Upload CSV</button>
+  </div>
+
+  <div ng-if="vm.isLoading">
+    <div layout="row" layout-sm="column" layout-align="space-around">
+      <md-progress-circular md-mode="indeterminate">
+      </md-progress-circular>
+    </div>
+  </div>
+
+  <div ng-if="vm.show">
+    <!-- exact table from live demo -->
+    <md-table-container>
+      <table md-table md-row-select multiple ng-model="vm.selected">
+        <thead md-head md-order="vm.query.order">
+          <tr md-row>
+            <th md-column md-order-by="name"><span>Nombre</span></th>
+            <th md-column md-order-by="type"><span>Tipo</span></th>
+            <th md-column md-order-by="title"><span>Titulo</span></th>
+            <th md-column><span>Autores</span></th>
+            <th md-column><span>País</span></th>
+            <th md-column><span>Caracter</span></th>
+            <th md-column><span>ISSN/ISBN</span></th>
+            <th md-column><span>Año</span></th>
+            <th md-column><span>Revista</span></th>
+          </tr>
+        </thead>
+        <tbody md-body>
+          <tr md-row md-auto-select ng-repeat="item in vm.formatedItems">
+            <td md-cell>{{item.name}}</td>
+            <td md-cell>{{item.type}}</td>
+            <td md-cell>{{item.title}}</td>
+            <td md-cell>{{item.authors}}</td>
+            <td md-cell>{{item.country}}</td>
+            <td md-cell>{{item.character}}</td>
+            <td md-cell>{{item.isxx}}</td>
+            <td md-cell>{{item.year}}</td>
+            <td md-cell>{{item.journal}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </md-table-container>
+  </div>
+
+  <div ng-if="vm.error"">
+    <span>Error parseando los CvLac, intente nuevamente</span>
+  </div>
+</md-content>
