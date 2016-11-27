@@ -6,11 +6,11 @@ function getCellphone(req, res) {
   const id = req.query.id;
   if (id) {
     // Use the Cellphone model to find a specific Cellphone
-    Cellphone.findById(id, (err, question) => {
+    Cellphone.findById(id, (err, cellphone) => {
       if (err) {
         res.status(400).json(err);
       }
-      res.status(200).json(question);
+      res.status(200).json(cellphone);
     });
   } else {
     // Use the Cellphone model to find all Cellphones
@@ -26,13 +26,13 @@ function getCellphone(req, res) {
 
 function postCellphone(req, res) {
   // Create a new instance of the Cellphone model
-  const question = new Cellphone(req.body);
+  const cellphone = new Cellphone(req.body);
   // Save the Cellphone and check for errors
-  question.save((err) => {
+  cellphone.save((err) => {
     if (err) {
       res.status(400).json(err);
     } else {
-      res.json({ message: 'Cellphone added to the database!', data: question });
+      res.json({ message: 'Cellphone added to the database!', data: cellphone });
     }
   });
 }
@@ -46,17 +46,17 @@ function putCellphone(req, res) {
       if (err) {
         res.status(400).json(err);
       } else {
-        const question = data;
-        if (question) {
+        const cellphone = data;
+        if (cellphone) {
           // Update the existing Cellphone degree, cvlacUrl and deparment
-          // TODO: Update the question
+          // TODO: Update the cellphone
           /*
-          question.degree = req.body.degree;
-          question.deparment = req.body.deparment;
-          question.cvlacUrl = req.body.cvlacUrl;
+          cellphone.degree = req.body.degree;
+          cellphone.deparment = req.body.deparment;
+          cellphone.cvlacUrl = req.body.cvlacUrl;
           */
           // Save the Cellphone and check for errors
-          question.save((error) => {
+          cellphone.save((error) => {
             if (error) {
               res.status(400).json(error);
             } else {
@@ -91,11 +91,11 @@ function getCellphoneByParentType(req, res) {
     .find({
       type: new RegExp(`${parent}`, 'i'),
     })
-    .exec((err, question) => {
+    .exec((err, cellphone) => {
       if (err) {
         res.status(400).json(err);
       }
-      res.status(200).json(question);
+      res.status(200).json(cellphone);
     });
 }
 function init(req, res) {
