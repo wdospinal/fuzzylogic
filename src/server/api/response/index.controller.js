@@ -1,5 +1,4 @@
 const Question = require('./index.model');
-const { getInitQuestions } = require('../../helpers/initialfats');
 
 function getQuestion(req, res) {
   // Set the id that came from the GET data
@@ -98,13 +97,7 @@ function getQuestionByParentType(req, res) {
       res.status(200).json(question);
     });
 }
-function init(req, res) {
-  // Set the id that came from the GET data
-  getInitQuestions((result) => {
-    res.status(200).json({ message: 'Initial Questions added!', error: result });
-  });
-}
 
 module.exports = {
-  getQuestion, postQuestion, putQuestion, deleteQuestion, getQuestionByParentType, init,
+  getQuestion, postQuestion, putQuestion, deleteQuestion, getQuestionByParentType,
 };

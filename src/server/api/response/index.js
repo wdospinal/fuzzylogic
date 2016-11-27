@@ -1,5 +1,5 @@
 const express = require('express');
-const { getQuestion, postQuestion, putQuestion, deleteQuestion, getQuestionByParentType, init } = require('./index.controller');
+const { getQuestion, postQuestion, putQuestion, deleteQuestion, getQuestionByParentType } = require('./index.controller');
 
 const router = express.Router();
 
@@ -13,6 +13,5 @@ router.delete('/', deleteQuestion);
 
 // Get questions depending of principal question
 router.get('/parentType', getQuestionByParentType);
-router.get('/init', init);
 
 module.exports = router;

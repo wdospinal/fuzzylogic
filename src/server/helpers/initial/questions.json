@@ -1,0 +1,153 @@
+[
+  {
+    "ask": "¿Qué atributo te parece más importante a la hora de comprar un celular?",
+    "answerOptions": [
+      "screen",
+      "performance",
+      "design",
+      "camera"
+    ],
+    "explicitOptions": [
+      "Pantalla",
+      "Desempeño",
+      "Diseño",
+      "Cámara"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type" : "principal"
+  },
+  {
+    "ask": "¿A qué le das más importancia en tu pantalla?",
+    "answerOptions": [
+      "size",
+      "resolution"
+    ],
+    "explicitOptions": [
+      "Tamaño",
+      "Resolución"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-4acdcfc91d7275b3c46c291c48c955af-default.jpeg",
+    "type" : "screenImportace"
+  },{
+    "ask": "Elige el tamaño de tu pantalla",
+    "answerOptions": [
+      "xs",
+      "s",
+      "m",
+      "l",
+      "xl"
+    ],
+    "explicitOptions": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type" : "screenSize"
+  },
+  {
+    "ask": "¿Cuál es el diseño que más te gusta?",
+    "explicitOptions": [
+      "Ejecutivo",
+      "Fashionista - Última moda",
+      "Fresco y descomplicado"
+    ],
+    "answerOptions": [
+      "ejecutive",
+      "fashion",
+      "fresh"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "design"
+  },
+  {
+    "ask": "¿Qué haces con tu cámara?",
+    "explicitOptions": [
+      "Profesional con la fotografía",
+      "Apasionado por la fotografía",
+      "Fotos buenas y selfies"
+    ],
+    "answerOptions": [
+      "profesional",
+      "pasion",
+      "normal"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "cameraDo"
+  },
+  {
+    "ask": "¿Qué tipo de desempeño buscas?",
+    "explicitOptions": [
+      "Ultra Desempeño (Mejor capacidad, mejor velocidad)",
+      "Alto Desempeño (Alta capacidad, alta velocidad)",
+      "Buen Desempeño (Buena capacidad, buena velocidad)"
+    ],
+    "answerOptions": [
+      "ultra",
+      "high",
+      "good"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "performanceType"
+  },
+  {
+    "ask": "¿Usas tu celular para tomar notas?",
+    "explicitOptions": [
+      "Si",
+      "No"
+    ],
+    "answerOptions": [
+      "true",
+      "false"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "performanceDo"
+  },
+  {
+    "ask": "Elige la resolución de tu pantalla",
+    "explicitOptions": [
+      "Quad HD (518 ppi)",
+      "Quad HD (530-577 ppi)",
+      "Full HD"
+    ],
+    "answerOptions": [
+      "good",
+      "high",
+      "ultra"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "screenResolution"
+  },
+  {
+    "ask": "¿Cuanto tiempo al día usas tu telefono?",
+    "explicitOptions": [
+      "2-4 horas",
+      "4-6 horas",
+      "6+ horas"
+    ],
+    "answerOptions": [
+      "2",
+      "4",
+      "6"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "time"
+  },
+  {
+    "ask": "¿Que precio dispones para tu telefono?",
+    "explicitOptions": [
+      "$117.900 - 849.900",
+      "849.900 - 1.799.900",
+      "1.799.900 - $4.099.000"
+    ],
+    "answerOptions": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "src": "https://d4z6dx8qrln4r.cloudfront.net/image-eb7ab86ac73e84f7edfbd8ca9759b6b7-default.gif",
+    "type": "price"
+  }
+]
