@@ -23,7 +23,10 @@ function getInitQuestions(done) {
   });
 }
 
-// Initial Cellphones
+function getInitCellphones(done) {
+  let obj;
+  
+}
 
 module.exports = {
   getInitQuestions,
