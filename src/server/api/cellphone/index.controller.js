@@ -14,11 +14,11 @@ function getCellphone(req, res) {
     });
   } else {
     // Use the Cellphone model to find all Cellphones
-    Cellphone.find((err, Cellphones) => {
+    Cellphone.find((err, cellphones) => {
       if (err) {
         res.status(400).json(err);
       } else {
-        res.status(200).json(Cellphones);
+        res.status(200).json(cellphones);
       }
     });
   }
@@ -103,6 +103,17 @@ function init(req, res) {
   getInitCellphones((result) => {
     res.status(200).json({ message: 'Initial Cellphones added!', error: result });
   });
+  const json = [];
+  getInitCellphones()
+    .then((phone) => {
+      json.push(phone);
+    })
+    .then(() => {
+      // res.status(200).json({ message: 'Initial Cellphones added!' });
+    })
+    .catch((error) => {
+      res.status(200).json({ message: 'Can\'t save', error });
+    });
 }
 
 module.exports = {

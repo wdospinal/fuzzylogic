@@ -6,13 +6,14 @@ function postResponse(req, res) {
   const response = req.body.response;
   const time = req.body.time;
   const price = req.body.price;
-  let cellphoneOptions = [];
-  response.forEach((element) => {
-    console.log(element);
-    cellphoneOptions
+
+  // TODO: A cada elemento preguntar su valor y en una lista ir guardando este resultado
+
+  rules(response)
+  .then((listPhones) => {
+    console.log(fuzz(time, price));
+    res.status(200).json({ message: 'Good send list', listPhones });
   });
-  res.status(200).json({ message: 'Good send list' });
-  console.log(fuzz(time, price));
 }
 
 module.exports = {
