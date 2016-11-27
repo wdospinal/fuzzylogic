@@ -1,18 +1,11 @@
 const express = require('express');
-const { parseTeachers } = require('./index.controller');
-/**
- * Endpoints:
- * /api/cvlac/teachers/parse
- */
+const { getQuestion, postQuestion, putQuestion, deleteQuestion } = require('./index.controller');
 
 const router = express.Router();
 
-/**
- * Parse teachers endpoint
- * @data: csv string with the teachers information
- * @response: json object with the teachers parsed
- */
-router.post('/teachers/parse', parseTeachers);
-
+router.get('/', getQuestion);
+router.post('/', postQuestion);
+router.put('/', putQuestion);
+router.delete('/', deleteQuestion);
 
 module.exports = router;
