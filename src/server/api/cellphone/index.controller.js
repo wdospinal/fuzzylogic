@@ -99,10 +99,9 @@ function getCellphoneByParentType(req, res) {
     });
 }
 function init(req, res) {
+  console.log('INIT: Cellphones');
   // Set the id that came from the GET data
-  getInitCellphones((result) => {
-    res.status(200).json({ message: 'Initial Cellphones added!', error: result });
-  });
+
   const json = [];
   getInitCellphones()
     .then((phone) => {

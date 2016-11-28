@@ -10,6 +10,7 @@ const CellphoneSchema = new mongoose.Schema({
   price: { type: String, required: true },
   src: { type: String, required: true },
   url: { type: String, required: true },
+  cal: { type: Date, default: 0 },
   red: String,
   so: String,
   capacity: String,

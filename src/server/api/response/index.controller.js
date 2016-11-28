@@ -6,14 +6,18 @@ function postResponse(req, res) {
   const response = req.body.response;
   const time = req.body.time;
   const price = req.body.price;
-
-  // TODO: A cada elemento preguntar su valor y en una lista ir guardando este resultado
+  console.log(response);
+  console.log(time);
+  console.log(price);
 
   rules(response)
-  .then((listPhones) => {
-    console.log(fuzz(time, price));
-    res.status(200).json({ message: 'Good send list', listPhones });
-  });
+    .then(listPhones => fuzz(time, price, listPhones))
+    .then((listPhones) => {
+      res.status(200).json({ message: 'Your cellphone ideal', listPhones });
+    })
+    .catch((error) => {
+      res.status(400).json({ message: 'Bad request!', error });
+    });
 }
 
 module.exports = {
